@@ -1,0 +1,12 @@
+The following packages will be UPDATED:
+
+  ca-certificates                     2022.10.11-haa95532_0 --> 2023.01.10-haa95532_0      
+
+
+
+Downloading and Extracting Packages
+
+Preparing transaction: done
+Verifying transaction: done
+Executing transaction: done
+PS C:\Users\14029\OneDrive\datafun-01-getting-started>

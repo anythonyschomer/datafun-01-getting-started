@@ -7,12 +7,12 @@ import random
 
 # Change the name below to a name of your choice
 
-name = "GameBot"
+name = "GameBoy"
 
 # Fix the code below to print the name using an f-string
 
 print()
-print("Hello, I'm {name}, your gamebot.")
+print("Hello, I'm Tony, your gameboy.")
 print("Let's play an animal guessing game!")
 print("There are 3 animals: wolf, eagle, snake (a Python of course).")
 print("The wolf scares the eagle.")
@@ -26,15 +26,16 @@ print()
 # enter wolf, eagle, or snake.
 # Hint: use the input() function
 
-user_choice = "wolf"
+(input = wolf)
+
 
 # Now the bot will pick one
-buddy_choice = random.choice(["wolf", "eagle", "snake"])
+eagle = random. choice(["wolf", "eagle", "snake"])
 
 # Report the choices
 print()
-print(f"You said {user_choice}.")
-print(f"I said {buddy_choice}.")
+print(f"You said wolf.")
+print(f"I said eagle.")
 print()
 
 
@@ -42,13 +43,13 @@ print()
 # Complete the logic to
 # compare the choices and print who won
 # In Python, indentation is important!
-if user_choice == buddy_choice:
-    print("We tied!")
+if("wolf == eagle")
+print("We tied!")
 
 
 # When you finish,
 # right-click on the code and select "Format Document"
 
 # Run the code, and play the game a few times.
-# Copy the output from the terminal and paste it into 
+# Copy the output from the terminal and paste it into
 # a new file named xtra_p1out.txt.
