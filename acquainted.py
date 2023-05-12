@@ -1,7 +1,7 @@
 """
 Purpose: Get acquainted with basic Python concepts.
 
-Author: Denise Case
+Author: Tony
 
 This file name is:   acquainted.py
 This module name is: acquainted
@@ -47,6 +47,7 @@ state = "California"
 country = "USA"
 
 pet_count = 1
+pet_count= 2
 skill_count = 24
 
 temperature_f = 81.5
