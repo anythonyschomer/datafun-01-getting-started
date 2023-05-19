@@ -1,53 +1,55 @@
 """
-This script calculates the area of a circle.
 
-It illustrates importing modules and using constants.
+Purpose: Calculate the area of a circle.
 
-It also illustrates using the built-in function round().
+Author: Denise Case
 
-When you install Python, you get a bunch of modules.
-These modules are called the standard library.
-Nearly all scripts will import at least one module 
-from the standard library.
+This script illustrates importing modules and using constants.
 
-If the standard library doesn't have what you need, 
-you can install third-party modules.
+It illustrates the built-in function round().
 
+When we install Python, it comes with the Python standard library.
+Nearly all scripts will import at least one module from the standard library.
+
+We can install additional, third-party modules using pip.
 We'll do that later. 
 
-All the programs in this repo use only the standard library.
+All scripts in this repository use only the standard library.
+
+@uses math module for pi constant
 
 """
+import math  
 
-import math  # import the math module from the standard library
+from util_datafun_logger import setup_logger
+logger, logname = setup_logger(__file__)
 
-# get the value of pi from the math module
+# Use the math module's constant for pi
 pi = math.pi
 
-# print a blank line for readability
-print()
+# get the radius from the user - input result is always a string
+# Use \n to add a blank new line to the terminal before we ask for input
+radius_string = input("\nEnter the radius of a circle: ")
 
-# get the radius from the user
-radius = input("Enter the radius of a circle: ")
+# convert the radius_string to a number
+radius = float(radius_string)
 
-# convert the radius to a number
-radius = float(radius)
-
-# calculate the area
+# calculate the area using the numeric value (not the string)
 area = pi * radius**2
 
-# show the user the results
-print()
-print(f"The area of a circle with radius {radius} is {area}.")
-print()
-print("Eww... that's a lot of decimal places - tmi!")
-print()
+# log the results
+logger.info(f"The area of a circle with radius {radius} is {area}.")
+logger.info("Eww... that's a lot of decimal places - tmi!")
+
 
 # round the area to two decimal places
 area = round(area, 2)
 
-# show the user the results
-print(f"The area of a circle with radius {radius} is {area}.")
-print()
-print("Much better!")
-print()
+# log the results
+logger.info(f"The area of a circle with radius {radius} is {area}.")
+logger.info("Much better!")
+
+
+# Use built-in open() function to read log file and print it to the terminal
+with open(logname, 'r') as file_wrapper:
+    print(file_wrapper.read())
